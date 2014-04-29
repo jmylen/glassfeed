@@ -1,0 +1,7 @@
+/src/main/resources/oauth.properties
+/target
+*.class
+
+# Package Files #
+*.war
+*.ear
