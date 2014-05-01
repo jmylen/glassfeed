@@ -1,16 +1,20 @@
 GlassFeedApp - A fork of the quickstart app for Java.
 https://developers.google.com/glass/quickstart/java
 ========================
+
 Application Prerequisites:
+==========================
 
-*Java 1.6
-*Apache Maven greater than 3.1
-
+* Java 1.6
+* Apache Maven greater than 3.1
+* Add oAuth Client ID and Client Secret to /src/main/resources/oauth.properties
 
 Commands:
-Run locally: mvn jetty:run
-Build war file: mvn war:war
-Deploy to AppEngine: mvn appengine:update
+========
+
+* Run locally: mvn jetty:run
+* Build war file: mvn war:war
+* Deploy to AppEngine: mvn appengine:update
 
 
 ## License
