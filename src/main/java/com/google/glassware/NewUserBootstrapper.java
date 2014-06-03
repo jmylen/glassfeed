@@ -19,7 +19,6 @@ import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.services.mirror.model.Command;
 import com.google.api.services.mirror.model.Contact;
-import com.google.api.services.mirror.model.NotificationConfig;
 import com.google.api.services.mirror.model.Subscription;
 import com.google.api.services.mirror.model.TimelineItem;
 import com.google.common.collect.Lists;
@@ -72,10 +71,8 @@ public class NewUserBootstrapper {
     }
 
     // Send welcome timeline item
-    TimelineItem timelineItem = new TimelineItem();
-    timelineItem.setText("Welcome to the Glass Java Quick Start");
-    timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
-    TimelineItem insertedItem = MirrorClient.insertTimelineItem(credential, timelineItem);
+    TimelineItem timelineItem = FeedItem.createStaticTimeLineItem("Welcome to Glass Feed!");
+    TimelineItem insertedItem = MirrorClient.insertTimelineItem(credential, timelineItem);    	
     LOG.info("Bootstrapper inserted welcome message " + insertedItem.getId() + " for user "
         + userId);
   }
