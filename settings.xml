@@ -3,6 +3,11 @@
     <server>
       <id>glass-java-starter</id>
       <configuration>
+        <httpConfiguration>
+          <all>
+            <connectionTimeout>3000</connectionTimeout>
+          </all>
+        </httpConfiguration>
         <timeout>6000</timeout> <!-- milliseconds -->
       </configuration>
     </server>

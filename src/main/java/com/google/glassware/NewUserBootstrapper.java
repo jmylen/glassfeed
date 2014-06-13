@@ -71,7 +71,7 @@ public class NewUserBootstrapper {
     }
 
     // Send welcome timeline item
-    TimelineItem timelineItem = FeedItem.createStaticTimeLineItem("Welcome to Glass Feed!");
+    TimelineItem timelineItem = FeedItem.createSimpleTextTimeLineItem("Welcome to Glass Feed!");
     TimelineItem insertedItem = MirrorClient.insertTimelineItem(credential, timelineItem);    	
     LOG.info("Bootstrapper inserted welcome message " + insertedItem.getId() + " for user "
         + userId);

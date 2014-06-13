@@ -15,8 +15,8 @@ package com.google.glassware;
  * the isPinned state of the timeline item.  <br/> VIEW_WEBSITE - Open the payload of the menu item in
  * the browser.  <br/> PLAY_VIDEO - Open the payload of the menu item in the Glass video player.*/
 enum BuiltinCardActions {
-	DELETE("DELETE"), READ_ALOUD("READ_ALOUD"), SHARE("SHARE"), BUILT_IN_ACTION_REPLY(
-			"REPLY");
+	DELETE("DELETE"), READ_ALOUD("READ_ALOUD"), SHARE("SHARE"), BUILT_IN_ACTION_REPLY("REPLY");
+	
 	private final String actionString;
 
 	BuiltinCardActions(String s) {

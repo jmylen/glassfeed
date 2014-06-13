@@ -46,12 +46,13 @@ public class AuthServlet extends HttpServlet {
     }
 
     // If we have a code, finish the OAuth 2.0 dance
-    if (req.getParameter("code") != null) {
+    String paramCode = req.getParameter("code");
+	if (paramCode != null) {
       LOG.info("Got a code. Attempting to exchange for access token.");
 
       AuthorizationCodeFlow flow = AuthUtil.newAuthorizationCodeFlow();
       TokenResponse tokenResponse =
-          flow.newTokenRequest(req.getParameter("code"))
+          flow.newTokenRequest(paramCode)
               .setRedirectUri(WebUtil.buildUrl(req, "/oauth2callback")).execute();
 
       // Extract the Google User ID from the ID token in the auth response

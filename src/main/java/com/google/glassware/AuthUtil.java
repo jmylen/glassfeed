@@ -42,7 +42,8 @@ import javax.servlet.http.HttpSession;
  * @author Jenny Murphy - http://google.com/+JennyMurphy
  */
 public class AuthUtil {
-  public static ListableMemoryCredentialStore store = new ListableMemoryCredentialStore();
+  private static final String USER_ID = "userId";
+public static ListableDataStoreCredentialStore store = new ListableDataStoreCredentialStore();
   public static final String GLASS_SCOPE = "https://www.googleapis.com/auth/glass.timeline "
       + "https://www.googleapis.com/auth/glass.location "
       + "https://www.googleapis.com/auth/userinfo.profile";
@@ -80,12 +81,12 @@ public class AuthUtil {
    */
   public static String getUserId(HttpServletRequest request) {
     HttpSession session = request.getSession();
-    return (String) session.getAttribute("userId");
+    return (String) session.getAttribute(USER_ID);
   }
 
   public static void setUserId(HttpServletRequest request, String userId) {
     HttpSession session = request.getSession();
-    session.setAttribute("userId", userId);
+    session.setAttribute(USER_ID, userId);
   }
 
   public static void clearUserId(HttpServletRequest request) throws IOException {
@@ -94,7 +95,7 @@ public class AuthUtil {
     store.delete(userId, getCredential(userId));
 
     // Remove their ID from the local session
-    request.getSession().removeAttribute("userId");
+    request.getSession().removeAttribute(USER_ID);
   }
 
   public static Credential getCredential(String userId) throws IOException {

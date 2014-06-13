@@ -17,96 +17,89 @@ import com.google.common.collect.Lists;
 
 public class FeedItem {
 
-	public static TimelineItem createStaticTimeLineItem(String text) {
-		TimelineItem timelineItem = new TimelineItem();
+	private static final String DRILL_IN = "Drill In";
+
+	public static TimelineItem createSimpleTextTimeLineItem(String text) {
+		TimelineItem timelineItem = initDefaultTimelineItem();
 		timelineItem.setText(text);
-		timelineItem.setNotification(new NotificationConfig()
-				.setLevel(NotificationLevel.DEFAULT.getLevel()));
-		List<MenuItem> menuItems = Lists.newArrayList();
-		MenuItem item = new MenuItem();
-		item.setAction(BuiltinCardActions.DELETE.getActionString());
-		item.setAction(BuiltinCardActions.READ_ALOUD.getActionString());
-		item.setAction(BuiltinCardActions.SHARE.getActionString());
-		menuItems.add(item);
-		timelineItem.setMenuItems(menuItems);
 		return timelineItem;
 	}
 
-	public static void createPaginatedItem(Credential credential)
-			throws IOException {
-		TimelineItem timelineItem = new TimelineItem();
-		timelineItem.setHtml(MainServlet.PAGINATED_HTML);
+	public static TimelineItem initDefaultTimelineItem() {
+		TimelineItem timelineItem = initDefaultTimelineItem();
+		ArrayList<MenuItem> menuItemList = Lists.newArrayList();
+		timelineItem.setMenuItems(menuItemList);
+		timelineItem.setNotification(new NotificationConfig().setLevel(NotificationLevel.DEFAULT.getLevel()));
+		return timelineItem;
+	}
+
+	public static TimelineItem createSimpleHtmlTimeLineItem(String html) {
+		TimelineItem timelineItem = initDefaultTimelineItem();
+		timelineItem.setHtml(html);
+		return timelineItem;
+	}
+
+	public static void createPaginatedItem(Credential credential) throws IOException {
+		TimelineItem timelineItem = createSimpleHtmlTimeLineItem(MainServlet.PAGINATED_HTML);
 
 		List<MenuItem> menuItemList = new ArrayList<MenuItem>();
-		menuItemList.add(new MenuItem().setAction("OPEN_URI").setPayload(
-				"https://www.google.com/search?q=cat+maintenance+tips"));
+		addUriPayload(timelineItem, "https://www.google.com/search?q=cat+maintenance+tips");
 		timelineItem.setMenuItems(menuItemList);
 
-		// Triggers an audible tone when the timeline item is received
-		timelineItem.setNotification(new NotificationConfig()
-				.setLevel(NotificationLevel.DEFAULT.getLevel()));
+		MirrorClient.insertTimelineItem(credential, timelineItem);
+	}
+
+	public static void addUriPayload(TimelineItem timelineItem, String uri) {
+		List<MenuItem> menuItemList = timelineItem.getMenuItems();
+		menuItemList.add(new MenuItem().setAction("OPEN_URI").setPayload(uri));
+	}
+
+	public static void createItemWithAction(HttpServletRequest req, Credential credential) throws IOException {
+		TimelineItem timelineItem = createItemWithCustomActions(req, "Tell me what you had for lunch :)");
 
 		MirrorClient.insertTimelineItem(credential, timelineItem);
 	}
 
-	public static void createItemWithAction(HttpServletRequest req,
-			Credential credential) throws IOException {
-		TimelineItem timelineItem = createFeedItem(req,
-				"Tell me what you had for lunch :)");
+	public static TimelineItem createItemWithCustomActions(HttpServletRequest req, String message) {
+		TimelineItem timelineItem = createSimpleTextTimeLineItem(message);
 
-		MirrorClient.insertTimelineItem(credential, timelineItem);
-	}
-
-	public static TimelineItem createFeedItem(HttpServletRequest req,
-			String message) {
-		TimelineItem timelineItem = new TimelineItem();
-		timelineItem.setText(message);
+		// Built in actions
+		addMenuItems(timelineItem, BuiltinCardActions.values());
 
 		List<MenuItem> menuItemList = new ArrayList<MenuItem>();
-		// Built in actions
-		addMenuItems(menuItemList, BuiltinCardActions.values());
-
 		// And custom actions
 		List<MenuValue> menuValues = new ArrayList<MenuValue>();
-		menuValues.add(new MenuValue().setIconUrl(
-				WebUtil.buildUrl(req, "/static/images/drill.png"))
-				.setDisplayName("Drill In"));
-		menuItemList.add(new MenuItem().setValues(menuValues).setId("drill")
-				.setAction("CUSTOM"));
+		menuValues.add(new MenuValue().setIconUrl(WebUtil.buildUrl(req, "/static/images/drill.png")).setDisplayName(
+				DRILL_IN));
+		menuItemList.add(new MenuItem().setValues(menuValues).setId("drill").setAction("CUSTOM"));
 
 		timelineItem.setMenuItems(menuItemList);
-		timelineItem.setNotification(new NotificationConfig()
-				.setLevel(NotificationLevel.DEFAULT.getLevel()));
+		timelineItem.setNotification(new NotificationConfig().setLevel(NotificationLevel.DEFAULT.getLevel()));
 		return timelineItem;
 	}
 
-	public static void addMenuItems(List<MenuItem> menuItemList,
-			BuiltinCardActions[] actionList) {
+	public static void addMenuItems(TimelineItem timelineItem, BuiltinCardActions[] actionList) {
 		for (BuiltinCardActions action : actionList) {
-			menuItemList
-					.add(new MenuItem().setAction(action.getActionString()));
+			timelineItem.getMenuItems().add(new MenuItem().setAction(action.getActionString()));
 		}
-
 	}
 
-	public static void createTimeLineItem(HttpServletRequest req,
-			Credential credential) throws MalformedURLException, IOException {
-		TimelineItem timelineItem = new TimelineItem();
+	public static void createTimeLineItem(HttpServletRequest req, Credential credential) throws MalformedURLException,
+			IOException {
+		TimelineItem timelineItem = initDefaultTimelineItem();
 
 		if (req.getParameter("message") != null) {
 			timelineItem.setText(req.getParameter("message"));
 		}
 
 		// Triggers an audible tone when the timeline item is received
-		timelineItem.setNotification(new NotificationConfig()
-				.setLevel(NotificationLevel.DEFAULT.getLevel()));
+		timelineItem.setNotification(new NotificationConfig().setLevel(NotificationLevel.DEFAULT.getLevel()));
 
 		if (req.getParameter("imageUrl") != null) {
 			// Attach an image, if we have one
 			URL url = new URL(req.getParameter("imageUrl"));
 			String contentType = req.getParameter("contentType");
-			MirrorClient.insertTimelineItem(credential, timelineItem,
-					contentType, url.openStream());
+			MirrorClient.insertTimelineItem(credential, timelineItem, contentType, url.openStream());
 		} else {
 			MirrorClient.insertTimelineItem(credential, timelineItem);
 		}
