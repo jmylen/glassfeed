@@ -1,0 +1,1118 @@
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 08:22:22-0700)
+Maven home: /usr/local/google/home/isaacchen/maven/apache-maven-3.1.1
+Java version: 1.7.0-google-v6, vendor: Google Inc.
+Java home: /usr/local/buildtools/java/jdk7-google-v6-64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.2.5-gg1336", arch: "amd64", family: "unix"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from /usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/conf/settings.xml
+[DEBUG] Reading user settings from /usr/local/google/home/isaacchen/.m2/settings.xml
+[DEBUG] Using local repository at /usr/local/google/home/isaacchen/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /usr/local/google/home/isaacchen/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.google:glass-java-starter:jar:0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Resolving plugin prefix appengine from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix appengine to com.google.appengine:appengine-maven-plugin from POM com.google:glass-java-starter:jar:0.1-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.google:glass-java-starter:jar:0.1-SNAPSHOT
+[DEBUG] Tasks:   [appengine:devserver]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building glass-java-starter 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Resolving plugin prefix appengine from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix appengine to com.google.appengine:appengine-maven-plugin from POM com.google:glass-java-starter:jar:0.1-SNAPSHOT
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.google:glass-java-starter:0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] --- init fork of com.google:glass-java-starter:0.1-SNAPSHOT for com.google.appengine:appengine-maven-plugin:1.9.3:devserver (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">1.6</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.6</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">1.6</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.6</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <runOrder default-value="filesystem"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.4:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <defaultManifestFile default-value="${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName default-value="${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value="false">${jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skipIfEmpty default-value="false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+</configuration>
+[DEBUG] --- exit fork of com.google:glass-java-starter:0.1-SNAPSHOT for com.google.appengine:appengine-maven-plugin:1.9.3:devserver (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.google.appengine:appengine-maven-plugin:1.9.3:devserver (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <address>${appengine.address}</address>
+  <disableUpdateCheck>${appengine.disableUpdateCheck}</disableUpdateCheck>
+  <fullScanSeconds default-value="5">${appengine.fullScanSeconds}</fullScanSeconds>
+  <jvmFlags>${appengine.jvmFlags}</jvmFlags>
+  <offline>${settings.offline}</offline>
+  <pluginRepos default-value="${project.remotePluginRepositories}"/>
+  <port>${appengine.port}</port>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <server>${appengine.server}</server>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] >>> appengine-maven-plugin:1.9.3:devserver (default-cli) @ glass-java-starter >>>
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=35, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=7, ConflictResolver.conflictItemCount=34, DefaultDependencyCollector.collectTime=369, DefaultDependencyCollector.transformTime=12}
+[DEBUG] com.google:glass-java-starter:jar:0.1-SNAPSHOT
+[DEBUG]    com.google.appengine:appengine-api-1.0-sdk:jar:1.9.2:compile
+[DEBUG]    com.google.apis:google-api-services-mirror:jar:v1-rev26-1.17.0-rc:compile
+[DEBUG]       com.google.api-client:google-api-client:jar:1.17.0-rc:compile
+[DEBUG]          com.google.oauth-client:google-oauth-client:jar:1.17.0-rc:compile
+[DEBUG]    com.google.http-client:google-http-client-jackson2:jar:1.17.0-rc:compile
+[DEBUG]       com.google.http-client:google-http-client:jar:1.17.0-rc:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[DEBUG]          org.apache.httpcomponents:httpclient:jar:4.0.1:compile
+[DEBUG]             org.apache.httpcomponents:httpcore:jar:4.0.1:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-core:jar:2.1.3:compile
+[DEBUG]    org.mortbay.jetty:jetty:jar:6.1.14:compile
+[DEBUG]       org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[DEBUG]    org.mortbay.jetty:jetty-util:jar:6.1.14:compile
+[DEBUG]    org.mortbay.jetty:jetty-plus:jar:6.1.14:compile
+[DEBUG]       geronimo-spec:geronimo-spec-jta:jar:1.0.1B-rc4:compile
+[DEBUG]    org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile
+[DEBUG]       org.eclipse.jdt:core:jar:3.1.1:compile
+[DEBUG]       ant:ant:jar:1.6.5:compile
+[DEBUG]    org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]    org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile
+[DEBUG]    org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile
+[DEBUG]    javax.servlet:servlet-api:jar:2.5:compile
+[DEBUG]    commons-logging:commons-logging:jar:1.1.2:compile
+[DEBUG]    commons-codec:commons-codec:jar:1.7:compile
+[DEBUG]    com.google.guava:guava:jar:14.0.1:compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ glass-java-starter ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=4, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=197, DefaultDependencyCollector.transformTime=6}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.google:glass-java-starter:0.1-SNAPSHOT @ /usr/local/google/home/isaacchen/git/glassfeed/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /usr/local/google/home/isaacchen/git/glassfeed/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Google Inc., env.SESSION_MANAGER=local/isaacchen.mtv.corp.google.com:@/tmp/.ICE-unix/4610,unix/isaacchen.mtv.corp.google.com:/tmp/.ICE-unix/4610, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.MAILCHECK=604800, os.name=Linux, env.PYTHONPATH=/usr/local/buildtools/current/sitecustomize, sun.boot.class.path=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/resources.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/rt.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/sunrsasign.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jsse.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jce.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/charsets.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jfr.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/classes, env.PWD=/usr/local/google/home/isaacchen/git/glassfeed, env.XDG_SESSION_COOKIE=331600c9fb9cb60e91d8cf7300000351-1400014983.107487-2038592723, sun.desktop=gnome, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0-google-v6-67275492-64246103, appengine.target.version=1.9.2, env.DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0.0, user.name=isaacchen, maven.build.version=Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 08:22:22-0700), env.USER=isaacchen, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin:/usr/local/google/home/isaacchen/bin:/usr/lib/lightdm/lightdm:/usr/lib/google-golang/bin:/usr/local/buildtools/java/jdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.P4DIFF=/google/src/files/head/depot/google3/devtools/scripts/p4diff -w, sun.boot.library.path=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/amd64, classworlds.conf=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin/m2.conf, java.version=1.7.0-google-v6, user.timezone=America/Los_Angeles, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Tx5EfSpwLA,guid=41c459f3a350bb28eba8d7ae000000a2, sun.arch.data.model=64, env.COMPIZ_CONFIG_PROFILE=ubuntu, env.SSH_AGENT_PID=4677, java.endorsed.dirs=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=2, file.separator=/, java.specification.name=Java Platform API Specification, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, appengine.app.version=1, user.country=US, env.GNOME_KEYRING_PID=4596, java.home=/usr/local/buildtools/java/jdk7-google-v6-64/jre, java.vm.info=mixed mode, env.KRB5CCNAME=/var/run/ccache/krb5cc_178661_EWosvC, env.LOGNAME=isaacchen, os.version=3.2.5-gg1336, env.PARINIT=rTbgqR B=.?_A_a Q=_s>|:, path.separator=:, java.vm.version=24.55-b03, env.LANGUAGE=en_US:, env.P4MERGE=/google/src/files/head/depot/eng/perforce/mergep4.tcl, env.XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0, env.JAVA_HOME=/usr/local/buildtools/java/jdk7-google-v6-64, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/usr/local/google/home/isaacchen, java.specification.vendor=Oracle Corporation, env.M2_HOME=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1, env.WINDOWID=69629742, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://wiki.corp.google.com/twiki/bin/view/Main/JavaPlatform, java.vm.vendor=Oracle Corporation, maven.home=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1, java.runtime.name=OpenJDK Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X appengine:devserver, java.class.path=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar, maven.version=3.1.1, env.CVS_RSH=ssh, env.UBUNTU_MENUPROXY=libappmenu.so, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/usr/local/google/home/isaacchen, java.io.tmpdir=/tmp, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, env.XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, java.vendor.url.bug=http://b.corp.google.com/createIssue?component=32554, env.MAVEN_OPTS=-Xms256m -Xmx512m, env.SSH_AUTH_SOCK=/tmp/ssh-DBU2gkF1qLaa/agent.4610, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/ext:/usr/java/packages/lib/ext, env.XAUTHORITY=/usr/local/google/home/isaacchen/.Xauthority, user.dir=/usr/local/google/home/isaacchen/git/glassfeed, env.MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, line.separator=
+, env.RSYNC_RSH=ssh, env.P4CONFIG=.p4config, java.vm.name=OpenJDK 64-Bit Server VM, env.COLORTERM=gnome-terminal, env.M2=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin, file.encoding=UTF-8, env.MAIL=/dev/null, env.GPG_AGENT_INFO=/tmp/keyring-fQ31ri/gpg:0:1, java.specification.version=1.7, env.AUTO_PROXY=https://proxyconfig.corp.google.com/proxy.pac, env.GNOME_KEYRING_CONTROL=/tmp/keyring-fQ31ri, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /usr/local/google/home/isaacchen/git/glassfeed/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 1 resource
+[DEBUG] file oauth.properties has a filtered file extension
+[DEBUG] copy /usr/local/google/home/isaacchen/git/glassfeed/src/main/resources/oauth.properties to /usr/local/google/home/isaacchen/git/glassfeed/target/classes/oauth.properties
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ glass-java-starter ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=0, ConflictMarker.nodeCount=160, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=43, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=10, ConflictResolver.conflictItemCount=63, DefaultDependencyCollector.collectTime=351, DefaultDependencyCollector.transformTime=13}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.1:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.2:runtime
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.2:compile
+[DEBUG]       org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]          log4j:log4j:jar:1.2.12:compile
+[DEBUG]          commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]       com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]       junit:junit:jar:3.8.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.2
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.12
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:3.8.2
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:1.0
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.5.5
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.2.2
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:compile' with basic configurator -->
+[DEBUG]   (f) basedir = /usr/local/google/home/isaacchen/git/glassfeed
+[DEBUG]   (f) buildDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target
+[DEBUG]   (f) classpathElements = [/usr/local/google/home/isaacchen/git/glassfeed/target/classes, /usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.2/appengine-api-1.0-sdk-1.9.2.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev26-1.17.0-rc/google-api-services-mirror-v1-rev26-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/api-client/google-api-client/1.17.0-rc/google-api-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/oauth-client/google-oauth-client/1.17.0-rc/google-oauth-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client-jackson2/1.17.0-rc/google-http-client-jackson2-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client/1.17.0-rc/google-http-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar, /usr/local/google/home/isaacchen/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.3/jackson-core-2.1.3.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-plus/6.1.14/jetty-plus-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/geronimo-spec/geronimo-spec-jta/1.0.1B-rc4/geronimo-spec-jta-1.0.1B-rc4.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar, /usr/local/google/home/isaacchen/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar, /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar, /usr/local/google/home/isaacchen/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar, /usr/local/google/home/isaacchen/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar, /usr/local/google/home/isaacchen/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar]
+[DEBUG]   (f) compileSourceRoots = [/usr/local/google/home/isaacchen/git/glassfeed/src/main/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/generated-sources/annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG]   (f) projectArtifact = com.google:glass-java-starter:jar:0.1-SNAPSHOT
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.6
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.6
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/usr/local/google/home/isaacchen/git/glassfeed/src/main/java]
+[DEBUG] Classpath: [/usr/local/google/home/isaacchen/git/glassfeed/target/classes
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.2/appengine-api-1.0-sdk-1.9.2.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev26-1.17.0-rc/google-api-services-mirror-v1-rev26-1.17.0-rc.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/api-client/google-api-client/1.17.0-rc/google-api-client-1.17.0-rc.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/oauth-client/google-oauth-client/1.17.0-rc/google-oauth-client-1.17.0-rc.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client-jackson2/1.17.0-rc/google-http-client-jackson2-1.17.0-rc.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client/1.17.0-rc/google-http-client-1.17.0-rc.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.3/jackson-core-2.1.3.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-plus/6.1.14/jetty-plus-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/geronimo-spec/geronimo-spec-jta/1.0.1B-rc4/geronimo-spec-jta-1.0.1B-rc4.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar
+ /usr/local/google/home/isaacchen/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar
+ /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar
+ /usr/local/google/home/isaacchen/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+ /usr/local/google/home/isaacchen/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar
+ /usr/local/google/home/isaacchen/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar
+ /usr/local/google/home/isaacchen/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar]
+[DEBUG] Output directory: /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.2/appengine-api-1.0-sdk-1.9.2.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev26-1.17.0-rc/google-api-services-mirror-v1-rev26-1.17.0-rc.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/api-client/google-api-client/1.17.0-rc/google-api-client-1.17.0-rc.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/oauth-client/google-oauth-client/1.17.0-rc/google-oauth-client-1.17.0-rc.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client-jackson2/1.17.0-rc/google-http-client-jackson2-1.17.0-rc.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client/1.17.0-rc/google-http-client-1.17.0-rc.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.3/jackson-core-2.1.3.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-plus/6.1.14/jetty-plus-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/geronimo-spec/geronimo-spec-jta/1.0.1B-rc4/geronimo-spec-jta-1.0.1B-rc4.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar
+[DEBUG]  /usr/local/google/home/isaacchen/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar
+[DEBUG] Source roots:
+[DEBUG]  /usr/local/google/home/isaacchen/git/glassfeed/src/main/java
+[DEBUG] Command line options:
+[DEBUG] -d /usr/local/google/home/isaacchen/git/glassfeed/target/classes -classpath /usr/local/google/home/isaacchen/git/glassfeed/target/classes:/usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.2/appengine-api-1.0-sdk-1.9.2.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev26-1.17.0-rc/google-api-services-mirror-v1-rev26-1.17.0-rc.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/api-client/google-api-client/1.17.0-rc/google-api-client-1.17.0-rc.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/oauth-client/google-oauth-client/1.17.0-rc/google-oauth-client-1.17.0-rc.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client-jackson2/1.17.0-rc/google-http-client-jackson2-1.17.0-rc.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client/1.17.0-rc/google-http-client-1.17.0-rc.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar:/usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar:/usr/local/google/home/isaacchen/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.3/jackson-core-2.1.3.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-plus/6.1.14/jetty-plus-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/geronimo-spec/geronimo-spec-jta/1.0.1B-rc4/geronimo-spec-jta-1.0.1B-rc4.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar:/usr/local/google/home/isaacchen/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar:/usr/local/google/home/isaacchen/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar:/usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar:/usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar:/usr/local/google/home/isaacchen/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/usr/local/google/home/isaacchen/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar:/usr/local/google/home/isaacchen/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar:/usr/local/google/home/isaacchen/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar: -sourcepath /usr/local/google/home/isaacchen/git/glassfeed/src/main/java: -s /usr/local/google/home/isaacchen/git/glassfeed/target/generated-sources/annotations -g -nowarn -target 1.6 -source 1.6 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 15 source files to /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[WARNING] /usr/local/google/home/isaacchen/git/glassfeed/src/main/java/com/google/glassware/AuthServlet.java: Some input files use or override a deprecated API.
+[WARNING] /usr/local/google/home/isaacchen/git/glassfeed/src/main/java/com/google/glassware/AuthServlet.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ glass-java-starter ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.google:glass-java-starter:0.1-SNAPSHOT @ /usr/local/google/home/isaacchen/git/glassfeed/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /usr/local/google/home/isaacchen/git/glassfeed/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Google Inc., env.SESSION_MANAGER=local/isaacchen.mtv.corp.google.com:@/tmp/.ICE-unix/4610,unix/isaacchen.mtv.corp.google.com:/tmp/.ICE-unix/4610, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.MAILCHECK=604800, os.name=Linux, env.PYTHONPATH=/usr/local/buildtools/current/sitecustomize, sun.boot.class.path=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/resources.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/rt.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/sunrsasign.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jsse.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jce.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/charsets.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/jfr.jar:/usr/local/buildtools/java/jdk7-google-v6-64/jre/classes, env.PWD=/usr/local/google/home/isaacchen/git/glassfeed, env.XDG_SESSION_COOKIE=331600c9fb9cb60e91d8cf7300000351-1400014983.107487-2038592723, sun.desktop=gnome, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0-google-v6-67275492-64246103, appengine.target.version=1.9.2, env.DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0.0, user.name=isaacchen, maven.build.version=Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 08:22:22-0700), env.USER=isaacchen, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin:/usr/local/google/home/isaacchen/bin:/usr/lib/lightdm/lightdm:/usr/lib/google-golang/bin:/usr/local/buildtools/java/jdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.P4DIFF=/google/src/files/head/depot/google3/devtools/scripts/p4diff -w, sun.boot.library.path=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/amd64, classworlds.conf=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin/m2.conf, java.version=1.7.0-google-v6, user.timezone=America/Los_Angeles, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Tx5EfSpwLA,guid=41c459f3a350bb28eba8d7ae000000a2, sun.arch.data.model=64, env.COMPIZ_CONFIG_PROFILE=ubuntu, env.SSH_AGENT_PID=4677, java.endorsed.dirs=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=2, file.separator=/, java.specification.name=Java Platform API Specification, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, appengine.app.version=1, user.country=US, env.GNOME_KEYRING_PID=4596, java.home=/usr/local/buildtools/java/jdk7-google-v6-64/jre, java.vm.info=mixed mode, env.KRB5CCNAME=/var/run/ccache/krb5cc_178661_EWosvC, env.LOGNAME=isaacchen, os.version=3.2.5-gg1336, env.PARINIT=rTbgqR B=.?_A_a Q=_s>|:, path.separator=:, java.vm.version=24.55-b03, env.LANGUAGE=en_US:, env.P4MERGE=/google/src/files/head/depot/eng/perforce/mergep4.tcl, env.XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0, env.JAVA_HOME=/usr/local/buildtools/java/jdk7-google-v6-64, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/usr/local/google/home/isaacchen, java.specification.vendor=Oracle Corporation, env.M2_HOME=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1, env.WINDOWID=69629742, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://wiki.corp.google.com/twiki/bin/view/Main/JavaPlatform, java.vm.vendor=Oracle Corporation, maven.home=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1, java.runtime.name=OpenJDK Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X appengine:devserver, java.class.path=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar, maven.version=3.1.1, env.CVS_RSH=ssh, env.UBUNTU_MENUPROXY=libappmenu.so, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/usr/local/google/home/isaacchen, java.io.tmpdir=/tmp, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, env.XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, java.vendor.url.bug=http://b.corp.google.com/createIssue?component=32554, env.MAVEN_OPTS=-Xms256m -Xmx512m, env.SSH_AUTH_SOCK=/tmp/ssh-DBU2gkF1qLaa/agent.4610, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/local/buildtools/java/jdk7-google-v6-64/jre/lib/ext:/usr/java/packages/lib/ext, env.XAUTHORITY=/usr/local/google/home/isaacchen/.Xauthority, user.dir=/usr/local/google/home/isaacchen/git/glassfeed, env.MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, line.separator=
+, env.RSYNC_RSH=ssh, env.P4CONFIG=.p4config, java.vm.name=OpenJDK 64-Bit Server VM, env.COLORTERM=gnome-terminal, env.M2=/usr/local/google/home/isaacchen/maven/apache-maven-3.1.1/bin, file.encoding=UTF-8, env.MAIL=/dev/null, env.GPG_AGENT_INFO=/tmp/keyring-fQ31ri/gpg:0:1, java.specification.version=1.7, env.AUTO_PROXY=https://proxyconfig.corp.google.com/proxy.pac, env.GNOME_KEYRING_CONTROL=/tmp/keyring-fQ31ri, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /usr/local/google/home/isaacchen/git/glassfeed/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /usr/local/google/home/isaacchen/git/glassfeed/src/test/resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ glass-java-starter ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = /usr/local/google/home/isaacchen/git/glassfeed
+[DEBUG]   (f) buildDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target
+[DEBUG]   (f) classpathElements = [/usr/local/google/home/isaacchen/git/glassfeed/target/test-classes, /usr/local/google/home/isaacchen/git/glassfeed/target/classes, /usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.2/appengine-api-1.0-sdk-1.9.2.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/apis/google-api-services-mirror/v1-rev26-1.17.0-rc/google-api-services-mirror-v1-rev26-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/api-client/google-api-client/1.17.0-rc/google-api-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/oauth-client/google-oauth-client/1.17.0-rc/google-oauth-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client-jackson2/1.17.0-rc/google-http-client-jackson2-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/http-client/google-http-client/1.17.0-rc/google-http-client-1.17.0-rc.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar, /usr/local/google/home/isaacchen/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.3/jackson-core-2.1.3.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jetty-plus/6.1.14/jetty-plus-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/geronimo-spec/geronimo-spec-jta/1.0.1B-rc4/geronimo-spec-jta-1.0.1B-rc4.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar, /usr/local/google/home/isaacchen/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar, /usr/local/google/home/isaacchen/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar, /usr/local/google/home/isaacchen/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar, /usr/local/google/home/isaacchen/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar, /usr/local/google/home/isaacchen/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar, /usr/local/google/home/isaacchen/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar, /usr/local/google/home/isaacchen/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar, /usr/local/google/home/isaacchen/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar]
+[DEBUG]   (f) compileSourceRoots = [/usr/local/google/home/isaacchen/git/glassfeed/src/test/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/generated-test-sources/test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/test-classes
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.6
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.6
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ glass-java-starter ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=132, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=27, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=3, ConflictResolver.conflictItemCount=77, DefaultDependencyCollector.collectTime=101, DefaultDependencyCollector.transformTime=5}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile
+[DEBUG]       org.apache.maven.surefire:surefire-api:jar:2.12.4:compile
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]       org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.8:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:test
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:2.12.4
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.1
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:1.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.8
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.9
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: junit:junit:jar:3.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:2.0.9
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test' with basic configurator -->
+[DEBUG]   (s) basedir = /usr/local/google/home/isaacchen/git/glassfeed
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (s) classesDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) localRepository =        id: local
+      url: file:///usr/local/google/home/isaacchen/.m2/repository/
+   layout: none
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.12.4:, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.12.4:compile, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, org.apache.maven.shared:maven-common-artifact-filters=org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:3.0.8:compile, org.apache.maven.reporting:maven-reporting-api=org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile, org.apache.maven.plugin-tools:maven-plugin-annotations=org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) projectArtifactMap = {com.google.appengine:appengine-api-1.0-sdk=com.google.appengine:appengine-api-1.0-sdk:jar:1.9.2:compile, com.google.apis:google-api-services-mirror=com.google.apis:google-api-services-mirror:jar:v1-rev26-1.17.0-rc:compile, com.google.api-client:google-api-client=com.google.api-client:google-api-client:jar:1.17.0-rc:compile, com.google.oauth-client:google-oauth-client=com.google.oauth-client:google-oauth-client:jar:1.17.0-rc:compile, com.google.http-client:google-http-client-jackson2=com.google.http-client:google-http-client-jackson2:jar:1.17.0-rc:compile, com.google.http-client:google-http-client=com.google.http-client:google-http-client:jar:1.17.0-rc:compile, com.google.code.findbugs:jsr305=com.google.code.findbugs:jsr305:jar:1.3.9:compile, org.apache.httpcomponents:httpclient=org.apache.httpcomponents:httpclient:jar:4.0.1:compile, org.apache.httpcomponents:httpcore=org.apache.httpcomponents:httpcore:jar:4.0.1:compile, com.fasterxml.jackson.core:jackson-core=com.fasterxml.jackson.core:jackson-core:jar:2.1.3:compile, org.mortbay.jetty:jetty=org.mortbay.jetty:jetty:jar:6.1.14:compile, org.mortbay.jetty:servlet-api-2.5=org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile, org.mortbay.jetty:jetty-util=org.mortbay.jetty:jetty-util:jar:6.1.14:compile, org.mortbay.jetty:jetty-plus=org.mortbay.jetty:jetty-plus:jar:6.1.14:compile, geronimo-spec:geronimo-spec-jta=geronimo-spec:geronimo-spec-jta:jar:1.0.1B-rc4:compile, org.mortbay.jetty:jsp-2.1=org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile, org.eclipse.jdt:core=org.eclipse.jdt:core:jar:3.1.1:compile, ant:ant=ant:ant:jar:1.6.5:compile, org.mortbay.jetty:jsp-api-2.1=org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, org.codehaus.jackson:jackson-core-asl=org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile, org.codehaus.jackson:jackson-mapper-asl=org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile, javax.servlet:servlet-api=javax.servlet:servlet-api:jar:2.5:compile, commons-logging:commons-logging=commons-logging:commons-logging:jar:1.1.2:compile, commons-codec:commons-codec=commons-codec:commons-codec:jar:1.7:compile, com.google.guava:guava=com.google.guava:guava:jar:14.0.1:compile}
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [       id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/surefire-reports
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (s) skip = false
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) testClassesDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = /usr/local/google/home/isaacchen/git/glassfeed/src/test/java
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = /usr/local/google/home/isaacchen/git/glassfeed
+[DEBUG]   (s) project = MavenProject: com.google:glass-java-starter:0.1-SNAPSHOT @ /usr/local/google/home/isaacchen/git/glassfeed/pom.xml
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ glass-java-starter ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=74, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=1, ConflictIdSorter.conflictIdCount=28, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=4, ConflictResolver.conflictItemCount=70, DefaultDependencyCollector.collectTime=37, DefaultDependencyCollector.transformTime=6}
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:jar:2.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:runtime
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]          org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]             org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]          commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]          org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]          org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.15:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.2:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.2
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:2.4:jar from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:2.4, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-jar-plugin:2.4:jar' with basic configurator -->
+[DEBUG]   (f) classesDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target/classes
+[DEBUG]   (f) defaultManifestFile = /usr/local/google/home/isaacchen/git/glassfeed/target/classes/META-INF/MANIFEST.MF
+[DEBUG]   (f) finalName = glass-java-starter-0.1-SNAPSHOT
+[DEBUG]   (f) forceCreation = false
+[DEBUG]   (f) outputDirectory = /usr/local/google/home/isaacchen/git/glassfeed/target
+[DEBUG]   (f) project = MavenProject: com.google:glass-java-starter:0.1-SNAPSHOT @ /usr/local/google/home/isaacchen/git/glassfeed/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@34fecba2
+[DEBUG]   (f) skipIfEmpty = false
+[DEBUG]   (f) useDefaultManifestFile = false
+[DEBUG] -- end configuration --
+[DEBUG] isUp2date: false (Resource with newer modification date found.)
+[INFO] Building jar: /usr/local/google/home/isaacchen/git/glassfeed/target/glass-java-starter-0.1-SNAPSHOT.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory com/
+[DEBUG] adding directory com/google/
+[DEBUG] adding directory com/google/glassware/
+[DEBUG] adding directory com/google/glassware/com/
+[DEBUG] adding directory com/google/glassware/com/google/
+[DEBUG] adding directory com/google/glassware/com/google/glassware/
+[DEBUG] adding entry com/google/glassware/FeedItem.class
+[DEBUG] adding entry com/google/glassware/AttachmentProxyServlet.class
+[DEBUG] adding entry com/google/glassware/NotificationLevel.class
+[DEBUG] adding entry com/google/glassware/BuiltinCardActions.class
+[DEBUG] adding entry com/google/glassware/ListableDataStoreCredentialStore.class
+[DEBUG] adding entry com/google/glassware/AuthServlet.class
+[DEBUG] adding entry com/google/glassware/MainServlet.class
+[DEBUG] adding entry com/google/glassware/NewUserBootstrapper.class
+[DEBUG] adding entry com/google/glassware/ListableDataStoreCredentialStore$DataStorePersistedCredential.class
+[DEBUG] adding entry com/google/glassware/BatchCallback.class
+[DEBUG] adding entry com/google/glassware/AuthUtil.class
+[DEBUG] adding entry com/google/glassware/AuthFilter.class
+[DEBUG] adding entry com/google/glassware/ReauthFilter.class
+[DEBUG] adding entry com/google/glassware/WebUtil.class
+[DEBUG] adding entry com/google/glassware/MirrorClient.class
+[DEBUG] adding entry com/google/glassware/NotifyServlet.class
+[DEBUG] adding entry oauth.properties
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/com.google/
+[DEBUG] adding directory META-INF/maven/com.google/glass-java-starter/
+[DEBUG] adding entry META-INF/maven/com.google/glass-java-starter/pom.xml
+[DEBUG] adding entry META-INF/maven/com.google/glass-java-starter/pom.properties
+[INFO] 
+[INFO] <<< appengine-maven-plugin:1.9.3:devserver (default-cli) @ glass-java-starter <<<
+[INFO] 
+[INFO] --- appengine-maven-plugin:1.9.3:devserver (default-cli) @ glass-java-starter ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=85, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=39, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=9, ConflictResolver.conflictItemCount=82, DefaultDependencyCollector.collectTime=340, DefaultDependencyCollector.transformTime=10}
+[DEBUG] com.google.appengine:appengine-maven-plugin:jar:1.9.3:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.1.0:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M2a:compile
+[DEBUG]          javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]             javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]             javax.inject:javax.inject:jar:1:compile
+[DEBUG]          org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a:compile
+[DEBUG]             asm:asm:jar:3.3.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.1.0:compile
+[DEBUG]          org.eclipse.aether:aether-spi:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-impl:jar:0.9.0.M2:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.16:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:3.0.10:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.4.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.1.0:compile
+[DEBUG]    org.eclipse.aether:aether-api:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.aether:aether-util:jar:0.9.0.M2:compile
+[DEBUG]    com.google.guava:guava:jar:14.0.1:compile
+[DEBUG]    com.google.appengine:appengine-tools-sdk:jar:1.9.3:compile
+[DEBUG]    com.google.appengine:appengine-local-endpoints:jar:1.9.3:compile
+[DEBUG]    com.google.appengine:appengine-endpoints:jar:1.9.3:compile
+[DEBUG]       com.google.appengine:appengine-api-1.0-sdk:jar:1.9.3:compile
+[DEBUG]    javax.servlet:servlet-api:jar:2.5:compile
+[DEBUG]    eu.infomas:annotation-detector:jar:3.0.1:compile
+[DEBUG]    org.slf4j:slf4j-nop:jar:1.7.5:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.5:compile
+[DEBUG]    org.apache.maven.shared:maven-invoker:jar:2.0.11:compile
+[DEBUG] Created new class realm plugin>com.google.appengine:appengine-maven-plugin:1.9.3
+[DEBUG] Importing foreign packages into class realm plugin>com.google.appengine:appengine-maven-plugin:1.9.3
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>com.google.appengine:appengine-maven-plugin:1.9.3
+[DEBUG]   Included: com.google.appengine:appengine-maven-plugin:jar:1.9.3
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: javax.annotation:jsr250-api:jar:1.0
+[DEBUG]   Included: javax.inject:javax.inject:jar:1
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a
+[DEBUG]   Included: asm:asm:jar:3.3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.16
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.10
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:0.9.0.M2
+[DEBUG]   Included: com.google.guava:guava:jar:14.0.1
+[DEBUG]   Included: com.google.appengine:appengine-tools-sdk:jar:1.9.3
+[DEBUG]   Included: com.google.appengine:appengine-local-endpoints:jar:1.9.3
+[DEBUG]   Included: com.google.appengine:appengine-endpoints:jar:1.9.3
+[DEBUG]   Included: com.google.appengine:appengine-api-1.0-sdk:jar:1.9.3
+[DEBUG]   Included: javax.servlet:servlet-api:jar:2.5
+[DEBUG]   Included: eu.infomas:annotation-detector:jar:3.0.1
+[DEBUG]   Included: org.slf4j:slf4j-nop:jar:1.7.5
+[DEBUG]   Included: org.slf4j:slf4j-api:jar:1.7.5
+[DEBUG]   Included: org.apache.maven.shared:maven-invoker:jar:2.0.11
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:3.1.0
+[DEBUG]   Excluded: org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M2a
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings-builder:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-model-builder:jar:3.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-aether-provider:jar:3.1.0
+[DEBUG]   Excluded: org.eclipse.aether:aether-spi:jar:0.9.0.M2
+[DEBUG]   Excluded: org.eclipse.aether:aether-impl:jar:0.9.0.M2
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.4.2
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:3.1.0
+[DEBUG]   Excluded: org.eclipse.aether:aether-api:jar:0.9.0.M2
+[DEBUG] Configuring mojo com.google.appengine:appengine-maven-plugin:1.9.3:devserver from plugin realm ClassRealm[plugin>com.google.appengine:appengine-maven-plugin:1.9.3, parent: sun.misc.Launcher$AppClassLoader@7e98f9c2]
+[DEBUG] Configuring mojo 'com.google.appengine:appengine-maven-plugin:1.9.3:devserver' with basic configurator -->
+[DEBUG]   (f) fullScanSeconds = 5
+[DEBUG]   (f) jvmFlags = []
+[DEBUG]   (f) offline = false
+[DEBUG]   (f) pluginRepos = [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG]   (f) project = MavenProject: com.google:glass-java-starter:0.1-SNAPSHOT @ /usr/local/google/home/isaacchen/git/glassfeed/pom.xml
+[DEBUG]   (f) projectRepos = [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@56c92228
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] Google App Engine Java SDK - Running Development Server
+[INFO] 
+[INFO] Retrieving Google App Engine Java SDK from Maven
+[INFO] Running /usr/local/buildtools/java/jdk7-google-v6-64/jre/bin/java -javaagent:/usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-java-sdk/1.9.3/appengine-java-sdk/appengine-java-sdk-1.9.3/lib/agent/appengine-agent.jar -Xbootclasspath/p:/usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-java-sdk/1.9.3/appengine-java-sdk/appengine-java-sdk-1.9.3/lib/override/appengine-dev-jdk-overrides.jar -Dappengine.fullscan.seconds=5 -classpath /usr/local/google/home/isaacchen/.m2/repository/com/google/appengine/appengine-java-sdk/1.9.3/appengine-java-sdk/appengine-java-sdk-1.9.3/lib/appengine-tools-api.jar com.google.appengine.tools.development.DevAppServerMain --allow_remote_shutdown /usr/local/google/home/isaacchen/git/glassfeed/target/glass-java-starter-0.1-SNAPSHOT
+[DEBUG] Was not able to contact the devappserver to shut it down.  Most likely this is due to it simply not running anymore. 
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:996)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:850)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1091)
+	at com.google.appengine.devappserver.AbstractDevAppServerMojo.stopDevAppServer(AbstractDevAppServerMojo.java:219)
+	at com.google.appengine.devappserver.AbstractDevAppServerMojo.startDevAppServer(AbstractDevAppServerMojo.java:247)
+	at com.google.appengine.devappserver.DevAppServerRunner.execute(DevAppServerRunner.java:42)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:317)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:152)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+[INFO] ********************************************************
+[INFO] There is a new version of the SDK available.
+[INFO] -----------
+[INFO] Latest SDK:
+[INFO] Release: 1.9.5
+[INFO] Timestamp: Wed Apr 30 18:55:22 PDT 2014
+[INFO] API versions: [1.0]
+[INFO] 
+[INFO] -----------
+[INFO] Your SDK:
+[INFO] Release: 1.9.3
+[INFO] Timestamp: Thu Apr 10 14:18:45 PDT 2014
+[INFO] API versions: [1.0]
+[INFO] 
+[INFO] -----------
+[INFO] Please visit https://developers.google.com/appengine/downloads for the latest SDK.
+[INFO] ********************************************************
+[INFO] Jun 15, 2014 3:12:43 PM com.google.apphosting.utils.config.AppEngineWebXmlReader readAppEngineWebXml
+[INFO] INFO: Successfully processed /usr/local/google/home/isaacchen/git/glassfeed/target/glass-java-starter-0.1-SNAPSHOT/WEB-INF/appengine-web.xml
+[INFO] Jun 15, 2014 3:12:43 PM com.google.apphosting.utils.config.AbstractConfigXmlReader readConfigXml
+[INFO] INFO: Successfully processed /usr/local/google/home/isaacchen/git/glassfeed/target/glass-java-starter-0.1-SNAPSHOT/WEB-INF/web.xml
+[INFO] Jun 15, 2014 3:12:43 PM com.google.apphosting.utils.jetty.JettyLogger info
+[INFO] INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
+[INFO] Jun 15, 2014 3:12:46 PM com.google.apphosting.utils.jetty.JettyLogger info
+[INFO] INFO: jetty-6.1.x
+[INFO] Jun 15, 2014 3:12:47 PM com.google.apphosting.utils.jetty.JettyLogger info
+[INFO] INFO: Started SelectChannelConnector@127.0.0.1:8080
+[INFO] Jun 15, 2014 3:12:47 PM com.google.appengine.tools.development.JettyContainerService startHotDeployScanner
+[INFO] INFO: Full scan of the web app in place every 5s.
+[INFO] Jun 15, 2014 3:12:47 PM com.google.appengine.tools.development.AbstractModule startup
+[INFO] INFO: Module instance default is running at http://localhost:8080/
+[INFO] Jun 15, 2014 3:12:47 PM com.google.appengine.tools.development.AbstractModule startup
+[INFO] INFO: The admin console is running at http://localhost:8080/_ah/admin
+[INFO] Jun 15, 2014 3:12:47 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+[INFO] INFO: Dev App Server is now running
+[INFO] Jun 15, 2014 3:18:31 PM com.google.apphosting.utils.jetty.JettyLogger warn
+[INFO] WARNING: /
+[INFO] java.lang.NullPointerException
+[INFO] 	at com.google.glassware.AuthUtil.getUserId(AuthUtil.java:85)
+[INFO] 	at com.google.glassware.AuthFilter.doFilter(AuthFilter.java:55)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.api.socket.dev.DevSocketFilter.doFilter(DevSocketFilter.java:74)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.ResponseRewriterFilter.doFilter(ResponseRewriterFilter.java:127)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:34)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:63)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:125)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doDirectRequest(DevAppServerModulesFilter.java:366)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doDirectModuleRequest(DevAppServerModulesFilter.java:349)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doFilter(DevAppServerModulesFilter.java:116)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+[INFO] 	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+[INFO] 	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+[INFO] 	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+[INFO] 	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+[INFO] 	at com.google.appengine.tools.development.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:98)
+[INFO] 	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+[INFO] 	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:491)
+[INFO] 	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+[INFO] 	at org.mortbay.jetty.Server.handle(Server.java:326)
+[INFO] 	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+[INFO] 	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+[INFO] 	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+[INFO] 	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+[INFO] 	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+[INFO] 	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+[INFO] 	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+[INFO] 
+[INFO] Jun 15, 2014 3:20:13 PM com.google.apphosting.utils.jetty.JettyLogger warn
+[INFO] WARNING: /
+[INFO] java.lang.NullPointerException
+[INFO] 	at com.google.glassware.AuthUtil.getUserId(AuthUtil.java:85)
+[INFO] 	at com.google.glassware.AuthFilter.doFilter(AuthFilter.java:55)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.api.socket.dev.DevSocketFilter.doFilter(DevSocketFilter.java:74)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.ResponseRewriterFilter.doFilter(ResponseRewriterFilter.java:127)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:34)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:63)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:125)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doDirectRequest(DevAppServerModulesFilter.java:366)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doDirectModuleRequest(DevAppServerModulesFilter.java:349)
+[INFO] 	at com.google.appengine.tools.development.DevAppServerModulesFilter.doFilter(DevAppServerModulesFilter.java:116)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+[INFO] 	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+[INFO] 	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+[INFO] 	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+[INFO] 	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+[INFO] 	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+[INFO] 	at com.google.appengine.tools.development.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:98)
+[INFO] 	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+[INFO] 	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:491)
+[INFO] 	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+[INFO] 	at org.mortbay.jetty.Server.handle(Server.java:326)
+[INFO] 	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+[INFO] 	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+[INFO] 	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+[INFO] 	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+[INFO] 	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+[INFO] 	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+[INFO] 	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+[INFO] 

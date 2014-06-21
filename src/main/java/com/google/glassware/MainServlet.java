@@ -1,18 +1,3 @@
-/*
- * Copyright (C) 2013 Google Inc.
- * 
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
 package com.google.glassware;
 
 import java.io.IOException;
@@ -85,80 +70,77 @@ public class MainServlet extends HttpServlet {
 
 			message = "Application has been unsubscribed.";
 
-		} else {
-			String TIMELINE_INSERTED = "A timeline item has been inserted.";
-			if (operationParam.equals("insertItem")) {
-				LOG.fine("Inserting Timeline Item");
-				FeedItem.createTimeLineItem(req, credential);
+		} else if (operationParam.equals("insertItem")) {
+			LOG.fine("Inserting Timeline Item");
+			FeedItem.createTimeLineItem(req, credential);
 
-				message = TIMELINE_INSERTED;
+			message = "A timeline item has been inserted.";
 
-			} else if (operationParam.equals("insertPaginatedItem")) {
-				LOG.fine("Inserting Timeline Item");
-				FeedItem.createPaginatedItem(credential);
+		} else if (operationParam.equals("insertPaginatedItem")) {
+			LOG.fine("Inserting Timeline Item");
+			FeedItem.createPaginatedItem(credential);
 
-				message = TIMELINE_INSERTED;
+			message = "A timeline item has been inserted.";
 
-			} else if (operationParam.equals("insertItemWithAction")) {
-				LOG.fine("Inserting Timeline Item");
-				FeedItem.createItemWithAction(req, credential);
+		} else if (operationParam.equals("insertItemWithAction")) {
+			LOG.fine("Inserting Timeline Item");
+			FeedItem.createItemWithAction(req, credential);
 
-				message = "A timeline item with actions has been inserted.";
+			message = "A timeline item with actions has been inserted.";
 
-			} else if (operationParam.equals("insertContact")) {
-				if (req.getParameter("iconUrl") == null || req.getParameter("name") == null) {
-					message = "Must specify iconUrl and name to insert contact";
-				} else {
-					// Insert a contact
-					LOG.fine("Inserting contact Item");
-					Contact contact = new Contact();
-					contact.setId(req.getParameter("id"));
-					contact.setDisplayName(req.getParameter("name"));
-					contact.setImageUrls(Lists.newArrayList(req.getParameter("iconUrl")));
-					contact.setAcceptCommands(Lists.newArrayList(new Command().setType("TAKE_A_NOTE")));
-					MirrorClient.insertContact(credential, contact);
-
-					message = "Inserted contact: " + req.getParameter("name");
-				}
-
-			} else if (operationParam.equals("deleteContact")) {
-
-				// Insert a contact
-				LOG.fine("Deleting contact Item");
-				MirrorClient.deleteContact(credential, req.getParameter("id"));
-
-				message = "Contact has been deleted.";
-
-			} else if (operationParam.equals("insertItemAllUsers")) {
-				if (req.getServerName().contains("glass-java-starter-demo.appspot.com")) {
-					message = "This function is disabled on the demo instance.";
-				}
-
-				// Insert a contact
-				List<String> users = AuthUtil.getAllUserIds();
-				LOG.info("found " + users.size() + " users");
-				if (users.size() > 10) {
-					// We wouldn't want you to run out of quota on your first day!
-					message = "Total user count is " + users.size() + ". Aborting broadcast " + "to save your quota.";
-				} else {
-					BatchCallback callback = insertAll(users);
-					message = "Successfully sent cards to " + callback.success + " users (" + callback.failure
-							+ " failed).";
-				}
-
-			} else if (operationParam.equals("deleteTimelineItem")) {
-
-				// Delete a timeline item
-				LOG.fine("Deleting Timeline Item");
-				MirrorClient.deleteTimelineItem(credential, req.getParameter("itemId"));
-
-				message = "Timeline Item has been deleted.";
-
+		} else if (operationParam.equals("insertContact")) {
+			if (req.getParameter("iconUrl") == null || req.getParameter("name") == null) {
+				message = "Must specify iconUrl and name to insert contact";
 			} else {
-				String operation = operationParam;
-				LOG.warning("Unknown operation specified " + operation);
-				message = "I don't know how to do that";
+				// Insert a contact
+				LOG.fine("Inserting contact Item");
+				Contact contact = new Contact();
+				contact.setId(req.getParameter("id"));
+				contact.setDisplayName(req.getParameter("name"));
+				contact.setImageUrls(Lists.newArrayList(req.getParameter("iconUrl")));
+				contact.setAcceptCommands(Lists.newArrayList(new Command().setType("TAKE_A_NOTE")));
+				MirrorClient.insertContact(credential, contact);
+
+				message = "Inserted contact: " + req.getParameter("name");
 			}
+
+		} else if (operationParam.equals("deleteContact")) {
+
+			// Insert a contact
+			LOG.fine("Deleting contact Item");
+			MirrorClient.deleteContact(credential, req.getParameter("id"));
+
+			message = "Contact has been deleted.";
+
+		} else if (operationParam.equals("insertItemAllUsers")) {
+			if (req.getServerName().contains("glass-java-starter-demo.appspot.com")) {
+				message = "This function is disabled on the demo instance.";
+			}
+
+			// Insert a contact
+			List<String> users = AuthUtil.getAllUserIds();
+			LOG.info("found " + users.size() + " users");
+			if (users.size() > 10) {
+				// We wouldn't want you to run out of quota on your first day!
+				message = "Total user count is " + users.size() + ". Aborting broadcast " + "to save your quota.";
+			} else {
+				BatchCallback callback = insertAll(users);
+				message = "Successfully sent cards to " + callback.success + " users (" + callback.failure
+						+ " failed).";
+			}
+
+		} else if (operationParam.equals("deleteTimelineItem")) {
+
+			// Delete a timeline item
+			LOG.fine("Deleting Timeline Item");
+			MirrorClient.deleteTimelineItem(credential, req.getParameter("itemId"));
+
+			message = "Timeline Item has been deleted.";
+
+		} else {
+			String operation = operationParam;
+			LOG.warning("Unknown operation specified " + operation);
+			message = "I don't know how to do that";
 		}
 		WebUtil.setFlash(req, message);
 		res.sendRedirect(WebUtil.buildUrl(req, "/"));

@@ -68,6 +68,7 @@ public static ListableDataStoreCredentialStore store = new ListableDataStoreCred
 
     String clientId = authProperties.getProperty("client_id");
     String clientSecret = authProperties.getProperty("client_secret");
+    authPropertiesStream.close();
 
     return new GoogleAuthorizationCodeFlow.Builder(new NetHttpTransport(), new JacksonFactory(),
         clientId, clientSecret, Collections.singleton(GLASS_SCOPE)).setAccessType("offline")
@@ -81,7 +82,8 @@ public static ListableDataStoreCredentialStore store = new ListableDataStoreCred
    */
   public static String getUserId(HttpServletRequest request) {
     HttpSession session = request.getSession();
-    return (String) session.getAttribute(USER_ID);
+    return request.getUserPrincipal().getName();
+    //return (String) session.getAttribute(USER_ID);
   }
 
   public static void setUserId(HttpServletRequest request, String userId) {
@@ -91,7 +93,7 @@ public static ListableDataStoreCredentialStore store = new ListableDataStoreCred
 
   public static void clearUserId(HttpServletRequest request) throws IOException {
     // Delete the credential in the credential store
-    String userId = getUserId(request);
+    String userId = getUserId(request);    
     store.delete(userId, getCredential(userId));
 
     // Remove their ID from the local session

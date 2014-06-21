@@ -26,9 +26,11 @@ public class FeedItem {
 	}
 
 	public static TimelineItem initDefaultTimelineItem() {
-		TimelineItem timelineItem = initDefaultTimelineItem();
-		ArrayList<MenuItem> menuItemList = Lists.newArrayList();
-		timelineItem.setMenuItems(menuItemList);
+		TimelineItem timelineItem = new TimelineItem();
+		List<MenuItem> menuItems = Lists.newArrayList();
+		timelineItem.setMenuItems(menuItems);
+		// Built in actions
+        addDefaultMenuItems(timelineItem);
 		timelineItem.setNotification(new NotificationConfig().setLevel(NotificationLevel.DEFAULT.getLevel()));
 		return timelineItem;
 	}
@@ -63,9 +65,7 @@ public class FeedItem {
 	public static TimelineItem createItemWithCustomActions(HttpServletRequest req, String message) {
 		TimelineItem timelineItem = createSimpleTextTimeLineItem(message);
 
-		// Built in actions
-		addMenuItems(timelineItem, BuiltinCardActions.values());
-
+		
 		List<MenuItem> menuItemList = new ArrayList<MenuItem>();
 		// And custom actions
 		List<MenuValue> menuValues = new ArrayList<MenuValue>();
@@ -78,8 +78,16 @@ public class FeedItem {
 		return timelineItem;
 	}
 
+	public static void addDefaultMenuItems(TimelineItem timelineItem) {
+		addMenuItems(timelineItem, BuiltinCardActions.values());
+	}	
+
 	public static void addMenuItems(TimelineItem timelineItem, BuiltinCardActions[] actionList) {
 		for (BuiltinCardActions action : actionList) {
+			if(timelineItem.getMenuItems() == null){				
+				List<MenuItem> menuItems = Lists.newArrayList();
+				timelineItem.setMenuItems(menuItems);
+			}
 			timelineItem.getMenuItems().add(new MenuItem().setAction(action.getActionString()));
 		}
 	}

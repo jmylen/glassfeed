@@ -44,6 +44,7 @@ public class ListableDataStoreCredentialStore implements CredentialStore {
 	 */
 	private final Map<String, DataStorePersistedCredential> store = new HashMap<String, DataStorePersistedCredential>();
 
+	@Override
 	public void store(String userId, Credential credential) {
 		lock.lock();
 		try {
@@ -58,6 +59,7 @@ public class ListableDataStoreCredentialStore implements CredentialStore {
 		}
 	}
 
+	@Override
 	public void delete(String userId, Credential credential) {
 		lock.lock();
 		try {
@@ -67,6 +69,7 @@ public class ListableDataStoreCredentialStore implements CredentialStore {
 		}
 	}
 
+	@Override
 	public boolean load(String userId, Credential credential) {
 		lock.lock();
 		try {

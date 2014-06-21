@@ -59,6 +59,7 @@ public class AttachmentProxyServlet extends HttpServlet {
     // Write it out
     resp.setContentType(contentType);
     ByteStreams.copy(attachmentInputStream, resp.getOutputStream());
+    attachmentInputStream.close();
   }
   
 }
